@@ -437,11 +437,11 @@
     ```
     
 - <script setup> 방식
+- 예시
     - 컴포넌트 등록의 간소화
-        - 기존에는 자식 컴포넌트를 쓸 때
-        `import` 하고 `components: { Calc }`처럼 등록하는 과정이 필요했다
+        - 기존에는 자식 컴포넌트를 쓸 때 `import` 하고 `components: { Calc }`처럼 등록하는 과정이 필요했다
         - <script setup>에서는, 그냥 `import`만 하면 끝이다
-    1. **컴파일 타임 매크로 - defineProps** ⭐
+    - **컴파일 타임 매크로 - defineProps** ⭐
         
         ```jsx
         const props = defineProps({
@@ -449,7 +449,7 @@
         })
         ```
         
-    2. **컴파일 타임 매크로 - defineEmits** ⭐ → this.emit이 emit으로 바뀐다
+    - **컴파일 타임 매크로 - defineEmits** ⭐ → this.emit이 emit으로 바뀐다
         
         ```jsx
         const emit = defineEmits(['delete-todo', 'toggle-completed'])
