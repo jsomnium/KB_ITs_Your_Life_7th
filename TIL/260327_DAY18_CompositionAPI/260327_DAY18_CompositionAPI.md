@@ -248,7 +248,7 @@
     
     ```jsx
     watch(data, (current, old) => {
-    	// 처리하려는 연산 로직
+      // 처리하려는 연산 로직
     })
     ```
     
@@ -281,7 +281,7 @@
             const x = ref(0);
             const result = ref(0);
         
-        		// watch(감시할 대상, (새로운 값, 이전 값)) => {}
+            // watch(감시할 대상, (새로운 값, 이전 값)) => {}
             watch(x, (current, old) => {
               console.log(`${old} -> ${current}`);
               result.value = current * 2;
@@ -359,7 +359,7 @@
     
     ```jsx
     watchEffect(
-    	() => { // 반응성 데이터를 사용하는 코드 작성}
+      () => { // 반응성 데이터를 사용하는 코드 작성}
     )
     ```
     
@@ -431,8 +431,8 @@
     
     ```jsx
     setup(props, context) {
-    	// 이벤트를 발신할 때
-    	context.emit('add-todo', todo)
+      // 이벤트를 발신할 때
+      context.emit('add-todo', todo)
     }
     ```
     
@@ -445,7 +445,7 @@
         
         ```jsx
         const props = defineProps({
-        	todoItem : { type : Object, required : true }
+          todoItem : { type : Object, required : true }
         })
         ```
         
@@ -455,6 +455,7 @@
         const emit = defineEmits(['delete-todo', 'toggle-completed'])
         ```
         
+    - 코드 예시
     
     ```jsx
     <script setup>
@@ -491,7 +492,9 @@
 
 1. Vue2 (Options API) → Vue3 (Composition API)
     - **Vue 2 (Options API)**
+        
         정해진 서랍에 나눠 담아야 했다
+        
         - 데이터: `data`
         - 계산: `computed`
         - 함수: `methods`
