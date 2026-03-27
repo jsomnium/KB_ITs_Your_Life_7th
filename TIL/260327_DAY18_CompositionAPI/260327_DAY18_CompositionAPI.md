@@ -484,3 +484,22 @@
 1. **Event Bubbling (이벤트 전파):** `TodoListItem`에서 발생한 `delete-todo` 신호가 어떻게 `TodoList`를 거쳐 `App.vue`까지 전달되는지 그 과정을 이해해야 한다 (**Event Emitting**)
 2. **Props Down, Events Up:** 데이터는 부모에서 자식으로 내려가고(`props`), 명령은 자식에서 부모로 올라온다(`emit`)는 Vue의 대원칙이다
 3. **배열 메서드 (JavaScript):** `findIndex`와 `splice`를 사용하여 반응성 객체(`reactive`)인 배열을 수정하는 방법이다. Vue는 배열이 수정되면 화면을 자동으로 다시 그린다.
+
+---
+
+# 이해를 돕기 위한 정리
+
+1. Vue2 (Options API) → Vue3 (Composition API)
+    - **Vue 2 (Options API)**
+        정해진 서랍에 나눠 담아야 했다
+        - 데이터: `data`
+        - 계산: `computed`
+        - 함수: `methods`
+    - **Vue 3 (Composition API)**
+        - 서랍 구분 없이 관련 있는 로직끼리 자유롭게 모아서 작성
+        - `setup()` 메서드
+        - 이걸 더 간편하게 줄인 게 `<script setup>` 메서드
+        - 변경 방식
+            - data() → ref(), reactive()
+            - watch → watch(), watchEffect()
+            - mounted() → onMounted(() ⇒ {})
